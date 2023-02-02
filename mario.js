@@ -412,6 +412,11 @@ class Mario {
             if (this.velocity.x >= MAX_WALK && !this.game.B) this.velocity.x = MAX_WALK;
             if (this.velocity.x <= -MAX_WALK && !this.game.B) this.velocity.x = -MAX_WALK;
 
+            // Limit moving mario off the left side of the screen
+            if(this.x - this.game.camera.x < 0) {
+                this.velocity.x = 0;
+                this.x = this.game.camera.x;
+            }
 
             // update position
             this.x += this.velocity.x * TICK * PARAMS.SCALE;
