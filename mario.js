@@ -433,7 +433,7 @@ class Mario {
                             } else { // big
                                 that.y = entity.BB.top - 2 * PARAMS.BLOCKWIDTH;
                             }
-                            that.velocity.y === 0;
+                            that.velocity.y = 0;
 
                             if(that.state === 4) that.state = 0; // set state to idle
                             that.updateBB();
@@ -448,7 +448,7 @@ class Mario {
                             } else { // big
                                 that.y = entity.BB.top - 2 * PARAMS.BLOCKWIDTH;
                             }
-                            that.velocity.y === 0;
+                            that.velocity.y = 0;
 
                             if(that.state === 4) that.state = 0; // set state to idle
                             that.updateBB();
